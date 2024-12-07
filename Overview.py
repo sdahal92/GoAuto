@@ -1,41 +1,16 @@
 import streamlit as st
-import streamlit as st
 
-# Custom HTML for the header
-st.markdown(
-    """
-    <style>
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        background-color: #f8f9fa; /* Light background color for the header */
-        border-bottom: 2px solid #ddd; /* Optional bottom border */
-    }
-    .header img {
-        max-width: 120px; /* Set the maximum width for the images */
-        height: auto; /* Maintain aspect ratio */
-    }
-    .header h1 {
-        flex-grow: 1;
-        text-align: center;
-        font-size: 24px;
-        color: #333; /* Text color */
-        margin: 0;
-    }
-    </style>
-    <div class="header">
-        <img src="images/Go_Auto.jpg" alt="Go Auto Logo">
-        <h1>Overview Page</h1>
-        <img src="images/Norquest Logo.jpeg" alt="Norquest Logo">
-    </div>
-    """,
-    unsafe_allow_html=True
-)
+# Header with Images in Top-Left and Top-Right Corners
+col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths as needed
 
-# Add additional content below the header
+with col1:
+    st.image("images/Go_Auto.jpg", width=100, caption="Go Auto Logo")  # Adjust width for smaller size
+
+with col2:
+    st.markdown("<h1 style='text-align: center;'>Overview Page</h1>", unsafe_allow_html=True)  # Centered title
+
+with col3:
+    st.image("images/Norquest Logo.jpeg", width=100, caption="Norquest Logo")  # Adjust width for smaller size
+
+# Additional Content Below the Header
 st.write("Welcome to the Overview page of Go Norquest!")
-
-
-
