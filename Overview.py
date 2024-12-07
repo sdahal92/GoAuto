@@ -7,7 +7,7 @@ with col1:
     st.image("images/Go_Auto.jpg", width=130)  # Adjust width for smaller size
 
 with col2:
-    st.markdown("<h1 style='text-align: center;'>Overview Page</h1>", unsafe_allow_html=True)  # Centered title
+    st.markdown("<h1 style='text-align: center;'></h1>", unsafe_allow_html=True)  # Centered title
 
 with col3:
     st.image("images/Norquest Logo.jpeg", width=130, )  # Adjust width for smaller size
