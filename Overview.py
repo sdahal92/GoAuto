@@ -45,26 +45,3 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Project Highlights Section
-st.markdown("### Project Highlights")  # Section Title
-
-# Highlight Text in Columns (No Images)
-highlight_col1, highlight_col2, highlight_col3 = st.columns(3)
-
-with highlight_col1:
-    st.markdown(
-        "<p style='text-align: center; font-size: 20px;'>Deep insights into sales trends.</p>",  # Increased font size
-        unsafe_allow_html=True
-    )
-
-with highlight_col2:
-    st.markdown(
-        "<p style='text-align: center; font-size: 20px;'>AI-powered predictions.</p>",  # Increased font size
-        unsafe_allow_html=True
-    )
-
-with highlight_col3:
-    st.markdown(
-        "<p style='text-align: center; font-size: 20px;'>Customer preference analysis.</p>",  # Increased font size
-        unsafe_allow_html=True
-    )
