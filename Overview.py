@@ -38,6 +38,7 @@ st.markdown(
         <ul>
             <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
             <li><b>Dealership information:</b> location and listing specifics.</li>
+            <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
         </ul>
     </div>
     """,
