@@ -45,7 +45,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Objective Section (Moved Below Dataset Includes)
+# Objective Section
 st.markdown(
     """
     <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 30px;">
