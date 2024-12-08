@@ -1,19 +1,17 @@
 import streamlit as st
-streamlit --version
-streamlit --version
 
 # Custom CSS for Light Pink Background
 light_pink_bg_css = """
 <style>
     body {
-        background-color: #ffe4e1; /* Light pink color */
+        background-color: #ffe4e1; /* Light pink background */
         font-family: 'Arial', sans-serif;
     }
     div[data-testid="stHeader"] {
-        background-color: rgba(0, 0, 0, 0); /* Transparent header background */
+        background-color: rgba(0, 0, 0, 0); /* Transparent header */
     }
     div[data-testid="stSidebar"] {
-        background: linear-gradient(to top, #ffe4e1, #fff5f3); /* Sidebar gradient matching background */
+        background: linear-gradient(to top, #ffe4e1, #fff5f3); /* Sidebar gradient */
     }
 </style>
 """
