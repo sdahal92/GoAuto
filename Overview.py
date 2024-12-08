@@ -29,6 +29,20 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+# Project Details Section
+st.markdown(
+    """
+    <div style="text-align: justify; font-size: 22px; color: #555; margin-top: 30px;"> 
+        <p><b>The dataset includes:</b></p>
+        <ul style="font-size: 22px; margin-top: 10px;">
+            <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
+            <li><b>Dealership information:</b> location and listing specifics.</li>
+            <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
 
 # Objective and Project Division Section
 st.markdown(
@@ -46,17 +60,4 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Project Details Section
-st.markdown(
-    """
-    <div style="text-align: justify; font-size: 22px; color: #555; margin-top: 30px;"> 
-        <p><b>The dataset includes:</b></p>
-        <ul style="font-size: 22px; margin-top: 10px;">
-            <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
-            <li><b>Dealership information:</b> location and listing specifics.</li>
-            <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
-        </ul>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
+
