@@ -12,7 +12,7 @@ with col2:
 with col3:
     st.image("images/Norquest Logo.jpeg", width=130)  # Adjust width for smaller size
 
-# Vibrant Full-Width Banner with Updated Title
+# Vibrant Full-Width Banner with Project Overview
 st.markdown(
     """
     <div style="
@@ -23,11 +23,22 @@ st.markdown(
         border-radius: 5px;">
         <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 10px;">Overview of the Project</h1>
         <p style="font-size: 18px; margin: 0;">
-        Analyzing Go Auto’s vehicle sales data sourced from the Canadian Black Book (CBB)./n
-Dataset includes:
-Vehicle details: year, make, model, mileage, price.
-Dealership information: location and listing specifics.
+        Analyzing Go Auto’s vehicle sales data, sourced from the Canadian Black Book (CBB), to uncover trends, optimize pricing strategies, and enhance dealership performance.
         </p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Project Details Section
+st.markdown(
+    """
+    <div style="text-align: justify; font-size: 16px; color: #555; margin-top: 20px;">
+        <p>The dataset includes:</p>
+        <ul>
+            <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
+            <li><b>Dealership information:</b> location and listing specifics.</li>
+        </ul>
     </div>
     """,
     unsafe_allow_html=True,
