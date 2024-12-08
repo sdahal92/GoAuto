@@ -1,4 +1,6 @@
 import streamlit as st
+streamlit --version
+streamlit --version
 
 # Custom CSS for Light Pink Background
 light_pink_bg_css = """
