@@ -63,4 +63,16 @@ st.markdown(
 
 # Project Highlights Section
 st.markdown(
-    ""
+    """
+    <div style="text-align: center; font-size: 30px; color: #555; margin-top: 30px;">
+        <p><b>Project Highlights:</b></p>
+        <ul style="font-size: 30px; margin-top: 20px; text-align: left;">
+            <li>Gained deep insights into vehicle sales trends.</li>
+            <li>Developed AI-powered predictions for days on market.</li>
+            <li>Provided actionable recommendations for pricing strategies.</li>
+            <li>Enhanced understanding of customer preferences.</li>
+        </ul>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
