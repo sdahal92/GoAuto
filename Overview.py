@@ -7,16 +7,15 @@ with col1:
     st.image("images/Go_Auto.jpg", width=130)  # Adjust width for smaller size
 
 with col2:
-    st.markdown("<h1 style='text-align: center;'>Overview Page</h1>", unsafe_allow_html=True)  # Centered title
+    st.markdown("<div></div>", unsafe_allow_html=True)  # Empty column for spacing
 
 with col3:
     st.image("images/Norquest Logo.jpeg", width=130)  # Adjust width for smaller size
 
-# Welcome Section
-st.write("")  # Spacer
+# Welcome Section (Moved Up)
 st.markdown(
     """
-    <div style="text-align: center; margin-top: 20px;">
+    <div style="text-align: center; margin-top: -20px;"> <!-- Adjust negative margin for spacing -->
         <h2 style="color: #4CAF50;">Welcome to Go Norquest!</h2>
         <p style="font-size: 18px; color: #555;">
         This project leverages cutting-edge data science and machine learning to provide actionable insights into vehicle sales trends. 
@@ -27,7 +26,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# Project Highlights Section Without Images
+# Project Highlights Section
 st.markdown("### Project Highlights")  # Section Title
 
 # Highlight Text in Columns (No Images)
@@ -50,3 +49,4 @@ with highlight_col3:
         "<p style='text-align: center; font-size: 18px;'>Customer preference analysis.</p>", 
         unsafe_allow_html=True
     )
+
