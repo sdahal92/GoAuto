@@ -12,12 +12,18 @@ with col2:
 with col3:
     st.image("images/Norquest Logo.jpeg", width=130)  # Adjust width for smaller size
 
-# Welcome Section (Moved Up)
+# Enhanced Welcome Section
 st.markdown(
     """
-    <div style="text-align: center; margin-top: -20px;"> <!-- Adjust negative margin for spacing -->
-        <h2 style="color: #4CAF50;">Welcome to Go Norquest!</h2>
-        <p style="font-size: 18px; color: #555;">
+    <div style="
+        text-align: center; 
+        margin-top: -20px; 
+        padding: 20px; 
+        background: linear-gradient(to right, #4CAF50, #2E7D32); 
+        border-radius: 10px; 
+        color: white;">
+        <h1 style="font-size: 36px; font-weight: bold; margin: 0;">Welcome to Go Norquest!</h1>
+        <p style="font-size: 18px; margin: 10px 0;">
         This project leverages cutting-edge data science and machine learning to provide actionable insights into vehicle sales trends. 
         Explore our data-driven strategies and AI-powered tools to optimize dealership performance.
         </p>
@@ -49,4 +55,3 @@ with highlight_col3:
         "<p style='text-align: center; font-size: 18px;'>Customer preference analysis.</p>", 
         unsafe_allow_html=True
     )
-
