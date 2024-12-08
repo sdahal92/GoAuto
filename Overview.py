@@ -23,7 +23,10 @@ st.markdown(
         border-radius: 5px;">
         <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 10px;">Overview of the Project</h1>
         <p style="font-size: 18px; margin: 0;">
-        This project leverages cutting-edge data science and machine learning to provide actionable insights into vehicle sales trends.
+        Analyzing Go Auto’s vehicle sales data sourced from the Canadian Black Book (CBB).
+Dataset includes:
+Vehicle details: year, make, model, mileage, price.
+Dealership information: location and listing specifics.
         </p>
     </div>
     """,
