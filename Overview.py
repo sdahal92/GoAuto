@@ -22,9 +22,25 @@ st.markdown(
         color: white; 
         border-radius: 5px;">
         <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 10px;">Overview of the Project</h1>
-        <p style="font-size: 22px; margin: 0;"> <!-- Increased font size -->
+        <p style="font-size: 22px; margin: 0;"> 
         This project was done as a part of the 3830 course in partnership with GoAuto to analyze Go Auto’s vehicle sales data using a dataset from the Canadian Black Book (CBB).
         </p>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
+# Objective Section
+st.markdown(
+    """
+    <div style="text-align: justify; font-size: 22px; color: #555; margin-top: 20px;">
+        <p><b>Objective:</b> Predict the 'Days on Market' for vehicles listed by Go Auto.</p>
+        <p>This project was divided into three major parts:</p>
+        <ol>
+            <li><b>Exploratory Data Analysis (EDA):</b> Analyzed the dataset to understand trends, patterns, and key features.</li>
+            <li><b>Machine Learning Model:</b> Built a regression model to predict the number of days a vehicle will take to sell.</li>
+            <li><b>App Development:</b> Developed this app to visualize the results and insights interactively.</li>
+        </ol>
     </div>
     """,
     unsafe_allow_html=True,
@@ -33,15 +49,38 @@ st.markdown(
 # Project Details Section
 st.markdown(
     """
-    <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 20px;"> <!-- Increased font size -->
-        <p style="font-size: 22px">The dataset includes:</p>
-        <ul>
-            <li style="font-size: 22px"><b style="font-size: 22px">Vehicle details:</b> year, make, model, mileage, and price.</li>
-            <li style="font-size: 22px"><b style="font-size: 22px">Dealership information:</b> location and listing specifics.</li>
-            <li style="font-size: 22px"><b style="font-size: 22px">Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
+    <div style="text-align: justify; font-size: 22px; color: #555; margin-top: 30px;"> 
+        <p><b>The dataset includes:</b></p>
+        <ul style="font-size: 22px; margin-top: 10px;">
+            <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
+            <li><b>Dealership information:</b> location and listing specifics.</li>
+            <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
         </ul>
     </div>
     """,
     unsafe_allow_html=True,
 )
 
+# Project Highlights Section
+st.markdown("### Project Highlights")  # Section Title
+
+# Highlight Text in Columns (No Images)
+highlight_col1, highlight_col2, highlight_col3 = st.columns(3)
+
+with highlight_col1:
+    st.markdown(
+        "<p style='text-align: center; font-size: 20px;'>Deep insights into sales trends.</p>",  # Increased font size
+        unsafe_allow_html=True
+    )
+
+with highlight_col2:
+    st.markdown(
+        "<p style='text-align: center; font-size: 20px;'>AI-powered predictions.</p>",  # Increased font size
+        unsafe_allow_html=True
+    )
+
+with highlight_col3:
+    st.markdown(
+        "<p style='text-align: center; font-size: 20px;'>Customer preference analysis.</p>",  # Increased font size
+        unsafe_allow_html=True
+    )
