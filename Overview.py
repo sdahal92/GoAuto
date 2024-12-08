@@ -1,4 +1,7 @@
 import streamlit as st
+git add app.py
+git commit -m "Added light pink background and project details"
+git push origin main
 
 # Custom CSS for Light Pink Background
 light_pink_bg_css = """
