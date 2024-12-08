@@ -1,6 +1,6 @@
 import streamlit as st
 
-# Custom CSS for background styling
+# Custom CSS for Background Styling
 page_bg_css = """
 <style>
     body {
@@ -8,7 +8,7 @@ page_bg_css = """
         font-family: 'Arial', sans-serif;
     }
     div[data-testid="stHeader"] {
-        background-color: rgba(0, 0, 0, 0);  /* Transparent header background */
+        background-color: rgba(0, 0, 0, 0); /* Transparent header background */
     }
     div[data-testid="stSidebar"] {
         background: linear-gradient(to top, #ffffff, #e3eaf2); /* Sidebar gradient */
