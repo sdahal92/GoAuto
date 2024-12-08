@@ -36,7 +36,7 @@ st.markdown(
     <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 20px;"> <!-- Increased font size -->
         <p>The dataset includes:</p>
         <ul>
-            <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
+            <li><b style="font-size: 22px">Vehicle details:</b> year, make, model, mileage, and price.</li>
             <li><b>Dealership information:</b> location and listing specifics.</li>
             <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
         </ul>
