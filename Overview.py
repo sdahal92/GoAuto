@@ -4,13 +4,13 @@ import streamlit as st
 col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths as needed
 
 with col1:
-    st.image("images/Go_Auto.jpg", width=150)  # Adjust width for smaller size
+    st.image("images/Go_Auto.jpg", width=200)  # Adjust width for smaller size
 
 with col2:
     st.markdown("<div></div>", unsafe_allow_html=True)  # Empty column for spacing
 
 with col3:
-    st.image("images/Norquest Logo.jpeg", width=130)  # Adjust width for smaller size
+    st.image("images/Norquest Logo.jpeg", width=200)  # Adjust width for smaller size
 
 # Vibrant Full-Width Banner with Project Overview
 st.markdown(
