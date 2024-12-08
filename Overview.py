@@ -1,5 +1,4 @@
 import streamlit as st
-git add app.py
 git commit -m "Added light pink background and project details"
 git push origin main
 
