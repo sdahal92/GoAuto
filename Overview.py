@@ -52,7 +52,7 @@ st.markdown(
         <p><b>Objective:</b> Predict the 'Days on Market' for vehicles listed by Go Auto.</p>
         <p>This project was divided into three major parts:</p>
         <ol style="font-size: 35px; margin-top: 20px;">
-            <li><b>Exploratory Data Analysis (EDA):</b> Analyzed the dataset to understand trends, patterns, and key features.</li>
+            <li style="font-size: 35px><b>Exploratory Data Analysis (EDA):</b> Analyzed the dataset to understand trends, patterns, and key features.</li>
             <li><b>Machine Learning Model:</b> Built a regression model to predict the number of days a vehicle will take to sell.</li>
             <li><b>App Development:</b> Developed this app to visualize the results and insights interactively.</li>
         </ol>
