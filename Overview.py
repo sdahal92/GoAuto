@@ -21,8 +21,8 @@ st.markdown(
         background: linear-gradient(to right, #ff7e5f, #feb47b); 
         color: white; 
         border-radius: 5px;">
-        <h1 style="font-size: 50px; font-weight: bold; margin-bottom: 20px;">Overview of the Project</h1>
-        <p style="font-size: 30px; margin: 0;"> 
+        <h1 style="font-size: 30px; font-weight: bold; margin-bottom: 20px;">Overview of the Project</h1>
+        <p style="font-size: 24px; margin: 0;"> 
         This project was done as a part of the 3830 course in partnership with GoAuto to analyze Go Auto’s vehicle sales data using a dataset from the Canadian Black Book (CBB).
         </p>
     </div>
