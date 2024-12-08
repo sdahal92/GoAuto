@@ -21,8 +21,8 @@ st.markdown(
         background: linear-gradient(to right, #ff7e5f, #feb47b); 
         color: white; 
         border-radius: 5px;">
-        <h1 style="font-size: 30px; font-weight: bold; margin-bottom: 20px;">Overview of the Project</h1>
-        <p style="font-size: 24px; margin: 0;"> 
+        <h1 style="font-size: 50px; font-weight: bold; margin-bottom: 20px;">Overview of the Project</h1>
+        <p style="font-size: 30px; margin: 0;"> 
         This project was done as a part of the 3830 course in partnership with GoAuto to analyze Go Auto’s vehicle sales data using a dataset from the Canadian Black Book (CBB).
         </p>
     </div>
@@ -55,22 +55,6 @@ st.markdown(
             <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
             <li><b>Dealership information:</b> location and listing specifics.</li>
             <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
-        </ul>
-    </div>
-    """,
-    unsafe_allow_html=True,
-)
-
-# Project Highlights Section
-st.markdown(
-    """
-    <div style="text-align: center; font-size: 30px; color: #555; margin-top: 30px;">
-        <p><b>Project Highlights:</b></p>
-        <ul style="font-size: 30px; margin-top: 20px; text-align: left;">
-            <li>Gained deep insights into vehicle sales trends.</li>
-            <li>Developed AI-powered predictions for days on market.</li>
-            <li>Provided actionable recommendations for pricing strategies.</li>
-            <li>Enhanced understanding of customer preferences.</li>
         </ul>
     </div>
     """,
