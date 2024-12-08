@@ -22,10 +22,9 @@ st.markdown(
         color: white; 
         border-radius: 5px;">
         <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 10px;">Overview of the Project</h1>
-        <p style="font-size: 18px; margin: 0;">
-       This project was done as a part of the 3830 course in partnership with GoAuto to analyze Go Auto’s vehicle sales data  using dataset from  from the Canadian Black
-Book (CBB) .
-        <p>
+        <p style="font-size: 22px; margin: 0;"> <!-- Increased font size -->
+        This project was done as a part of the 3830 course in partnership with GoAuto to analyze Go Auto’s vehicle sales data using a dataset from the Canadian Black Book (CBB).
+        </p>
     </div>
     """,
     unsafe_allow_html=True,
@@ -34,7 +33,7 @@ Book (CBB) .
 # Project Details Section
 st.markdown(
     """
-    <div style="text-align: justify; font-size: 16px; color: #555; margin-top: 20px;">
+    <div style="text-align: justify; font-size: 18px; color: #555; margin-top: 20px;"> <!-- Increased font size -->
         <p>The dataset includes:</p>
         <ul>
             <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
@@ -54,18 +53,18 @@ highlight_col1, highlight_col2, highlight_col3 = st.columns(3)
 
 with highlight_col1:
     st.markdown(
-        "<p style='text-align: center; font-size: 18px;'>Deep insights into sales trends.</p>", 
+        "<p style='text-align: center; font-size: 20px;'>Deep insights into sales trends.</p>",  # Increased font size
         unsafe_allow_html=True
     )
 
 with highlight_col2:
     st.markdown(
-        "<p style='text-align: center; font-size: 18px;'>AI-powered predictions.</p>", 
+        "<p style='text-align: center; font-size: 20px;'>AI-powered predictions.</p>",  # Increased font size
         unsafe_allow_html=True
     )
 
 with highlight_col3:
     st.markdown(
-        "<p style='text-align: center; font-size: 18px;'>Customer preference analysis.</p>", 
+        "<p style='text-align: center; font-size: 20px;'>Customer preference analysis.</p>",  # Increased font size
         unsafe_allow_html=True
     )
