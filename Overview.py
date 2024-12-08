@@ -34,11 +34,11 @@ st.markdown(
 st.markdown(
     """
     <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 30px;"> 
-        <p><b>The dataset includes:</b></p>
+        <p style="font-size: 30px;"><b>The dataset includes:</b></p>
         <ul style="font-size: 30px; margin-top: 20px;">
-            <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
-            <li><b>Dealership information:</b> location and listing specifics.</li>
-            <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
+            <li style="font-size: 30px;"><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
+            <li style="font-size: 30px;"><b>Dealership information:</b> location and listing specifics.</li>
+            <li style="font-size: 30px;"><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
         </ul>
     </div>
     """,
@@ -49,12 +49,12 @@ st.markdown(
 st.markdown(
     """
     <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 30px;">
-        <p><b>Objective:</b> Predict the 'Days on Market' for vehicles listed by Go Auto.</p>
-        <p>This project was divided into three major parts:</p>
-        <ol style="font-size: 30px;">
-            <li><b>Exploratory Data Analysis (EDA):</b> Analyzed the dataset to understand trends, patterns, and key features.</li>
-            <li><b>Machine Learning Model:</b> Built a regression model to predict the number of days a vehicle will take to sell.</li>
-            <li><b>App Development:</b> Developed this app to visualize the results and insights interactively.</li>
+        <p style="font-size: 30px;"><b>Objective:</b> Predict the 'Days on Market' for vehicles listed by Go Auto.</p>
+        <p style="font-size: 30px;">This project was divided into three major parts:</p>
+        <ol style="font-size: 30px; margin-top: 20px;">
+            <li style="font-size: 30px;"><b>Exploratory Data Analysis (EDA):</b> Analyzed the dataset to understand trends, patterns, and key features.</li>
+            <li style="font-size: 30px;"><b>Machine Learning Model:</b> Built a regression model to predict the number of days a vehicle will take to sell.</li>
+            <li style="font-size: 30px;"><b>App Development:</b> Developed this app to visualize the results and insights interactively.</li>
         </ol>
     </div>
     """,
