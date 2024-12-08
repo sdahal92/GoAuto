@@ -1,23 +1,4 @@
 import streamlit as st
-git commit -m "Added light pink background and project details"
-git push origin main
-
-# Custom CSS for Light Pink Background
-light_pink_bg_css = """
-<style>
-    body {
-        background-color: #ffe4e1; /* Light pink background */
-        font-family: 'Arial', sans-serif;
-    }
-    div[data-testid="stHeader"] {
-        background-color: rgba(0, 0, 0, 0); /* Transparent header */
-    }
-    div[data-testid="stSidebar"] {
-        background: linear-gradient(to top, #ffe4e1, #fff5f3); /* Sidebar gradient */
-    }
-</style>
-"""
-st.markdown(light_pink_bg_css, unsafe_allow_html=True)
 
 # Header with Images in Top-Left and Top-Right Corners
 col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths as needed
