@@ -22,19 +22,20 @@ st.markdown(
         color: white; 
         border-radius: 5px;">
         <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 10px;">Overview of the Project</h1>
-        <p style="font-size: 22px; margin: 0;"> 
+        <p style="font-size: 30px; margin: 0;"> 
         This project was done as a part of the 3830 course in partnership with GoAuto to analyze Go Auto’s vehicle sales data using a dataset from the Canadian Black Book (CBB).
         </p>
     </div>
     """,
     unsafe_allow_html=True,
 )
+
 # Project Details Section
 st.markdown(
     """
-    <div style="text-align: justify; font-size: 22px; color: #555; margin-top: 30px;"> 
+    <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 30px;"> 
         <p><b>The dataset includes:</b></p>
-        <ul style="font-size: 22px; margin-top: 10px;">
+        <ul style="font-size: 30px; margin-top: 10px;">
             <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
             <li><b>Dealership information:</b> location and listing specifics.</li>
             <li><b>Vehicle listings:</b> Active and sold vehicles from Edmonton dealerships within the last 30 days.</li>
@@ -47,10 +48,10 @@ st.markdown(
 # Objective and Project Division Section
 st.markdown(
     """
-    <div style="text-align: justify; font-size: 22px; color: #555; margin-top: 30px;">
+    <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 30px;">
         <p><b>Objective:</b> Predict the 'Days on Market' for vehicles listed by Go Auto.</p>
         <p>This project was divided into three major parts:</p>
-        <ol>
+        <ol style="font-size: 30px;">
             <li><b>Exploratory Data Analysis (EDA):</b> Analyzed the dataset to understand trends, patterns, and key features.</li>
             <li><b>Machine Learning Model:</b> Built a regression model to predict the number of days a vehicle will take to sell.</li>
             <li><b>App Development:</b> Developed this app to visualize the results and insights interactively.</li>
@@ -59,5 +60,3 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
-
-
