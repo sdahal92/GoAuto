@@ -1,5 +1,22 @@
 import streamlit as st
 
+# Custom CSS for background styling
+page_bg_css = """
+<style>
+    body {
+        background: linear-gradient(to bottom right, #f0f4f8, #d9e4f1);
+        font-family: 'Arial', sans-serif;
+    }
+    div[data-testid="stHeader"] {
+        background-color: rgba(0, 0, 0, 0);  /* Transparent header background */
+    }
+    div[data-testid="stSidebar"] {
+        background: linear-gradient(to top, #ffffff, #e3eaf2); /* Sidebar gradient */
+    }
+</style>
+"""
+st.markdown(page_bg_css, unsafe_allow_html=True)
+
 # Header with Images in Top-Left and Top-Right Corners
 col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths as needed
 
