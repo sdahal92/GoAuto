@@ -23,8 +23,9 @@ st.markdown(
         border-radius: 5px;">
         <h1 style="font-size: 40px; font-weight: bold; margin-bottom: 10px;">Overview of the Project</h1>
         <p style="font-size: 18px; margin: 0;">
-        Analyzing Go Auto’s vehicle sales data, sourced from the Canadian Black Book (CBB), to uncover trends, optimize pricing strategies, and enhance dealership performance.
-        </p>
+       This project was done as a part of the 3830 course in partnership with GoAuto to analyze Go Auto’s vehicle sales data  using dataset from  from the Canadian Black
+Book (CBB) .
+        <p>
     </div>
     """,
     unsafe_allow_html=True,
