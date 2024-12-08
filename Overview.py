@@ -33,7 +33,7 @@ st.markdown(
 # Project Details Section
 st.markdown(
     """
-    <div style="text-align: justify; font-size: 22px; color: #555; margin-top: 20px;"> <!-- Increased font size -->
+    <div style="text-align: justify; font-size: 30px; color: #555; margin-top: 20px;"> <!-- Increased font size -->
         <p>The dataset includes:</p>
         <ul>
             <li><b>Vehicle details:</b> year, make, model, mileage, and price.</li>
