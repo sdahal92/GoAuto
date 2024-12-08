@@ -12,5 +12,5 @@ with col2:
 with col3:
     st.image("images/Norquest Logo.jpeg", width=130, )  # Adjust width for smaller size
 
-# Additional Content Below the Header
-st.write("Welcome to the Overview page of Go Norquest!")
+"DAYS ON MARKET PREDICTOR FOR VEHICLE SALES OPTIMIZATION"
+
