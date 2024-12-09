@@ -49,10 +49,10 @@ listing_type = st.radio("What type of car are you considering?", options=["New",
 car_make = st.selectbox("Car Make", options=data["make"].unique())
 car_model = st.selectbox("Car Model", options=data[data["make"] == car_make]["model"].unique())
 
-# Select price range
+# Select price range starting from $0
 price_range = st.slider(
     "Select Price Range ($)",
-    min_value=int(data["price"].min()),
+    min_value=0,  # Start from $0
     max_value=int(data["price"].max()),
     value=(20000, 50000),  # Default range
     step=5000
