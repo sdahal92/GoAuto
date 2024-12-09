@@ -23,7 +23,7 @@ st.image("images/Picture5.jpg", width=800)
 # Description for the chart with font size set to 24px
 st.markdown("""
     <div style="font-size: 24px; line-height: 1.8; color: #333;">
-        <p>This bar chart shows the number of vehicles by fuel type in the dataset.</p>
+        <p style="font-size: 20px;>This bar chart shows the number of vehicles by fuel type in the dataset.</p>
         <ul>
             <li><b>Gasoline Vehicles</b>: The majority, with 124,029 cars, dominate the dataset.</li>
             <li><b>Diesel</b>: There are 8,632 diesel cars, the second-largest category.</li>
