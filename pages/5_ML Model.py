@@ -2,7 +2,10 @@ import streamlit as st
 import pandas as pd
 
 # Load the dataset
-data = pd.read_csv("model_predictions_full.csv")  # Ensure the file is in the same directory as this script
+data = pd.read_csv("model_predictions_full.csv")  # Ensure the file is in the same directory
+
+# Rename "listing_type" values for clarity
+data["listing_type"] = data["listing_type"].replace({"Active": "New", "Sold": "Used"})
 
 # Title for the page
 st.markdown("""
@@ -35,15 +38,15 @@ mileage_range = st.slider(
     step=5000
 )
 
-listing_type = st.radio("Listing Type", options=["Active", "Sold"])
+listing_type = st.radio("What type of car are you considering?", options=["New", "Used"])
 
 # Filter the dataset based on inputs
 filtered_data = data[
     (data["make"] == car_make) &
     (data["model"] == car_model) &
-    (data["price"] >= price_range[0]) & (data["price"] <= price_range[1]) &  # Match price range
-    (data["mileage"] >= mileage_range[0]) & (data["mileage"] <= mileage_range[1]) &  # Match mileage range
-    (data["listing_type"].str.lower() == listing_type.lower())  # Match listing type
+    (data["price"] >= price_range[0]) & (data["price"] <= price_range[1]) &
+    (data["mileage"] >= mileage_range[0]) & (data["mileage"] <= mileage_range[1]) &
+    (data["listing_type"] == listing_type)
 ]
 
 # Display the predicted days on market
