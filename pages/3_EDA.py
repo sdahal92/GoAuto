@@ -64,3 +64,33 @@ st.markdown("""
         <p>The data highlights the price disparities among car brands, emphasizing the market segmentation between luxury and economy vehicles.</p>
     </div>
 """, unsafe_allow_html=True)
+
+# Section 3: Average Days on Market by Make
+st.markdown("""
+    <div style="
+        text-align: center; 
+        background-color: #FFDAB9; 
+        color: #5C4033; 
+        padding: 20px; 
+        border-radius: 15px; 
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 50px; 
+        margin-bottom: 30px;">
+        Average Days on Market by Car Make
+    </div>
+""", unsafe_allow_html=True)
+
+st.image("images/avg days on market by make.jpg", width=800)
+st.markdown("""
+    <div style="font-size: 24px; line-height: 1.8; color: #333;">
+        <p>The bar chart displays the average days on market for the top 10 car makes, highlighting how long, on average, vehicles from each make stay on the market before being sold.</p>
+        <ul>
+            <li><b>Ram vehicles</b> have the longest average days on market, exceeding 80 days.</li>
+            <li><b>Toyota</b> has the shortest time on the market, with vehicles averaging less than 30 days.</li>
+        </ul>
+        <h3 style="font-size: 24px; font-weight: bold; color: #5C4033;">Conclusion:</h3>
+        <p>This data underscores the varying levels of demand for different car makes, with Toyota having the quickest turnover and Ram taking significantly longer.</p>
+    </div>
+""", unsafe_allow_html=True)
