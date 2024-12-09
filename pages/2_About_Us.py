@@ -20,3 +20,4 @@ st.markdown("""
         <h1>Team Regression Rebels</h1>
     </div>
 """, unsafe_allow_html=True)
+ st.image("images/Go_Auto.jpg", width=200)
