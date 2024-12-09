@@ -51,16 +51,16 @@ with col1:
 with col2:
     st.markdown("""
     <div class="roles">
-        <p><strong>Spandan Dahal</strong></p>
-        <p>Model Developer</p>
+        <p><strong>Abhinav Datt</strong></p>
+        <p>Visualization Expert</p>
     </div>
     """, unsafe_allow_html=True)
 
 with col3:
     st.markdown("""
     <div class="roles">
-        <p><strong>Abhinav Datt</strong></p>
-        <p>Visualization Expert</p>
+        <p><strong>Spandan Dahal</strong></p>
+        <p>Model Developer</p>
     </div>
     """, unsafe_allow_html=True)
 
