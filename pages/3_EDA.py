@@ -1,9 +1,17 @@
 import streamlit as st
 
-# Title for the EDA page
-st.title("Exploratory Data Analysis (EDA)")
-
-st.markdown("<br>", unsafe_allow_html=True)
+# Center-aligned and colorful title for the EDA page
+st.markdown("""
+    <h1 style="
+        text-align: center; 
+        background: -webkit-linear-gradient(#ff7e5f, #feb47b); 
+        -webkit-background-clip: text; 
+        color: transparent;
+        font-size: 3rem;
+        margin-bottom: 20px;">
+        Exploratory Data Analysis (EDA)
+    </h1>
+""", unsafe_allow_html=True)
 
 # Display the image with adjusted width
 st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", width=800)
