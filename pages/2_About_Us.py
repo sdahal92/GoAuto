@@ -3,7 +3,7 @@ import streamlit as st
 # Set page configuration
 st.set_page_config(page_title="Team Regression Rebels", layout="centered")
 
-# Custom HTML for stylish topic header
+# Custom HTML for a stylish, multi-line topic header with a gap
 st.markdown("""
     <style>
     .team-header {
@@ -14,12 +14,18 @@ st.markdown("""
         border-radius: 10px;
         text-align: center;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        line-height: 1.5; /* Adjust line spacing */
+    }
+    .spacer {
+        margin-top: 30px; /* Adds vertical space */
     }
     </style>
     <div class="team-header">
-        <h1>Team Regression Rebels</h1>
+        <h1>Team</h1>
+        <h1>Regression Rebels</h1>
     </div>
+    <div class="spacer"></div> <!-- Gap between title and photo -->
 """, unsafe_allow_html=True)
 
-# Add the photo
+# Add the photo with space below the title
 st.image("images/Screenshot 2024-12-08 194954.png", width=900)
