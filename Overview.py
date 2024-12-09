@@ -53,7 +53,7 @@ st.markdown(
         <p style="font-size: 20px;">This project was divided into three major parts:</p>
         <ol style="font-size: 20px; margin-top: 20px;">
             <li style="font-size: 20px;"><b>Exploratory Data Analysis (EDA):</b> Analyzed the dataset to understand trends, patterns, and key features.</li>
-            <li style="font-size: 20px;"><b>Machine Learning Model:</b> Built a regression model to predict the number of days a vehicle will take to sell.</li>
+            <li style="font-size: 20px;"><b>Machine Learning Model:</b> Built a regression model to predict the number of days a vehicle will take to sell .Also,build visualizations using PowerBI.</li>
             <li style="font-size: 20px;"><b>App Development:</b> Developed this app to visualize the results and insights interactively.</li>
         </ol>
     </div>
