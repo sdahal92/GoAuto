@@ -1,16 +1,19 @@
 import streamlit as st
 
-# Center-aligned and colorful title for the EDA page
+# Title inside a styled box
 st.markdown("""
-    <h1 style="
+    <div style="
         text-align: center; 
-        background: -webkit-linear-gradient(#ff7e5f, #feb47b); 
-        -webkit-background-clip: text; 
-        color: transparent;
-        font-size: 3rem;
+        background-color: #FFDAB9; 
+        color: #5C4033; 
+        padding: 20px; 
+        border-radius: 15px; 
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        font-size: 2rem;
+        font-weight: bold;
         margin-bottom: 20px;">
         Exploratory Data Analysis (EDA)
-    </h1>
+    </div>
 """, unsafe_allow_html=True)
 
 # Display the image with adjusted width
