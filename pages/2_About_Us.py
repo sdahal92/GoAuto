@@ -3,13 +3,13 @@ import streamlit as st
 # Set page configuration
 st.set_page_config(page_title="About Us - Regression Rebels", layout="centered")
 
-# Custom HTML for stylish heading with light colors
+# Custom HTML for stylish heading with a peach theme
 st.markdown("""
     <style>
     .team-header {
         font-family: 'Arial', sans-serif;
-        color: #333333; /* Dark gray for text */
-        background-color: #E8F5E9; /* Light green background */
+        color: #4A4A4A; /* Dark gray for text */
+        background-color: #FFDAB9; /* Light peach background */
         padding: 20px;
         border-radius: 10px;
         text-align: center;
