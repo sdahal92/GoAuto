@@ -10,7 +10,7 @@ st.markdown("""
         font-family: 'Arial', sans-serif;
         color: #4A4A4A; /* Dark gray text */
         text-align: center;
-        font-size: 60px; /* Large font size */
+        font-size: 60px !important; /* Enforce large font size */
         font-weight: bold; /* Bold text */
         margin-bottom: 30px;
         margin-top: 20px;
@@ -25,6 +25,7 @@ st.markdown("""
         box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         line-height: 1.5; /* Adjust line spacing */
         margin-top: 20px;
+        font-size: 50px !important; /* Enforce consistent font size for header */
     }
     .spacer {
         margin-top: 40px; /* Adds vertical space */
