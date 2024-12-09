@@ -17,12 +17,10 @@ st.markdown("""
     <br><br>
 """, unsafe_allow_html=True)
 
-# Display the image with adjusted width
+# Section 1: Distribution of Cars by Fuel Type
 st.image("images/Picture5.jpg", width=800)
-
-# Description for the chart with font size set to 24px
 st.markdown("""
-    <div style= "font-size: 24px; line-height: 1.8; color: #333;">
+    <div style="font-size: 24px; line-height: 1.8; color: #333;">
         <p>This bar chart shows the number of vehicles by fuel type in the dataset.</p>
         <ul>
             <li><b>Gasoline Vehicles</b>: The majority, with 124,029 cars, dominate the dataset.</li>
@@ -33,5 +31,36 @@ st.markdown("""
         </ul>
         <h3 style="font-size: 24px; font-weight: bold; color: #5C4033;">Conclusion:</h3>
         <p>Gasoline vehicles are the largest group, with other fuel types present in much smaller numbers, highlighting the continued dominance of traditional fuel in the market.</p>
+    </div>
+""", unsafe_allow_html=True)
+
+# Section 2: Average Price vs. Make
+st.markdown("""
+    <div style="
+        text-align: center; 
+        background-color: #FFDAB9; 
+        color: #5C4033; 
+        padding: 20px; 
+        border-radius: 15px; 
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 50px; 
+        margin-bottom: 30px;">
+        Average Price vs. Make
+    </div>
+""", unsafe_allow_html=True)
+
+st.image("images/avg price vs make.jpg", width=800)
+st.markdown("""
+    <div style="font-size: 24px; line-height: 1.8; color: #333;">
+        <p>The bar chart displays the average price of vehicles by car make, showing significant price variation between brands.</p>
+        <ul>
+            <li><b>Maserati and Rivian</b> stand out with the highest average prices, exceeding $120,000.</li>
+            <li><b>Porsche, Mercedes-Benz, and Land Rover</b> also have relatively high average prices, positioning them among the luxury brands.</li>
+            <li><b>More affordable brands</b> like Kia, Hyundai, and Ford are toward the lower end of the price range.</li>
+        </ul>
+        <h3 style="font-size: 24px; font-weight: bold; color: #5C4033;">Conclusion:</h3>
+        <p>The data highlights the price disparities among car brands, emphasizing the market segmentation between luxury and economy vehicles.</p>
     </div>
 """, unsafe_allow_html=True)
