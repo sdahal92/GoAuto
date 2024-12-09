@@ -82,14 +82,17 @@ price_range = st.slider(
     step=5000
 )
 
-# Select vehicle year range based on converted year
-vehicle_year_range = st.slider(
-    "Select Vehicle Year Range",
-    min_value=int(data["vehicle_year"].min()),
-    max_value=int(data["vehicle_year"].max()),
-    value=(int(data["vehicle_year"].min()), int(data["vehicle_year"].max())),  # Default full range
-    step=1
-)
+# Dynamic behavior for vehicle age
+if listing_type == "Used":
+    vehicle_age_range = st.slider(
+        "Select Vehicle Age Range (years)",
+        min_value=int(data["vehicle_age"].min()),
+        max_value=int(data["vehicle_age"].max()),
+        value=(1, 5),  # Default range for used cars
+        step=1
+    )
+else:
+    vehicle_age_range = (0, 0)  # For new cars, age is effectively 0
 
 # Disable mileage slider dynamically based on "New" or "Used" selection
 if listing_type == "Used":
@@ -108,7 +111,7 @@ filtered_data = data[
     (data["make"] == car_make) &
     (data["model"] == car_model) &
     (data["price"] >= price_range[0]) & (data["price"] <= price_range[1]) &
-    (data["vehicle_year"] >= vehicle_year_range[0]) & (data["vehicle_year"] <= vehicle_year_range[1]) &
+    (data["vehicle_age"] >= vehicle_age_range[0]) & (data["vehicle_age"] <= vehicle_age_range[1]) &
     (data["mileage"] >= mileage_range[0]) & (data["mileage"] <= mileage_range[1]) &
     (data["listing_type"] == listing_type)
 ]
