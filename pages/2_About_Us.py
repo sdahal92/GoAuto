@@ -24,7 +24,6 @@ st.markdown("""
     </style>
     <div class="team-header">
         <h1>Team Regression Rebels</h1>
-        <p>Innovators in Machine Learning and Predictive Analytics</p>
     </div>
     <div class="main-text">
         Welcome to the <strong>Regression Rebels</strong> team page! We are a group of enthusiastic machine learning practitioners dedicated to creating impactful solutions. 
