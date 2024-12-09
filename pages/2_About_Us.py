@@ -31,7 +31,7 @@ st.markdown("""
     }
     </style>
     <div class="meet-team">
-        <p>Meet Our Team</p>
+        <p style="text-align: center; font-size: 50px; font-weight: bold;>Meet Our Team</p>
     </div>
     <div class="team-header">
         <h1>Team</h1>
