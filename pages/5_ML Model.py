@@ -8,9 +8,35 @@ data = pd.read_csv("model_predictions_full.csv")  # Ensure the file is in the sa
 # Rename "listing_type" values for clarity
 data["listing_type"] = data["listing_type"].replace({"Active": "New", "Sold": "Used"})
 
+# Custom CSS for larger fonts
+st.markdown(
+    """
+    <style>
+        /* General page style */
+        body {
+            font-size: 18px;
+        }
+        h1 {
+            font-size: 36px;
+            color: #5C4033;
+        }
+        h2, h3, h4 {
+            font-size: 28px;
+        }
+        label {
+            font-size: 20px !important;
+        }
+        .stButton button {
+            font-size: 18px !important;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
 # Title for the page
 st.markdown("""
-    <h1 style="text-align: center; color: #5C4033;">
+    <h1 style="text-align: center;">
         🚗 Car Days-on-Market Predictor
     </h1>
 """, unsafe_allow_html=True)
