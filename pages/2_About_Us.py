@@ -38,8 +38,7 @@ st.markdown("""
 
 # Add the photo and name
 st.markdown("""
-    <div class="team-member">
         <img src="images/Screenshot 2024-12-08 194954.png" alt="Team Member">
-        <h3>John Doe</h3>
+   
     </div>
 """, unsafe_allow_html=True)
