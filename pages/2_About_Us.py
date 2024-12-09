@@ -10,8 +10,10 @@ st.markdown("""
         font-family: 'Arial', sans-serif;
         color: #4A4A4A; /* Dark gray text */
         text-align: center;
-        font-size: 28px;
-        margin-bottom: 20px;
+        font-size: 48px; /* Larger font size */
+        font-weight: bold; /* Bold text */
+        margin-bottom: 30px;
+        margin-top: 20px;
     }
     .team-header {
         font-family: 'Arial', sans-serif;
