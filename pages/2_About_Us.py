@@ -30,8 +30,7 @@ st.markdown("""
         margin-top: 40px; /* Adds vertical space */
     }
     </style>
-    <div class="meet-team">
-        <p>Meet Our Team</p>
+   
     </div>
     <div class="team-header">
         <h1>Team</h1>
