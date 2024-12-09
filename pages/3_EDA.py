@@ -15,6 +15,8 @@ st.markdown("""
         Exploratory Data Analysis (EDA)
     </div>
 """, unsafe_allow_html=True)
+<br><br>
+<br><br>
 
 # Display the image with adjusted width
 st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", width=800)
