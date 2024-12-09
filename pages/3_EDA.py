@@ -1,1 +1,25 @@
+import streamlit as st
+
+# Title for the EDA page
+st.title("Exploratory Data Analysis (EDA)")
+
+# Subtitle for the section
+st.subheader("Distribution of Cars by Fuel Type")
+
+# Display the image
+st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", use_column_width=True)
+
+# Description for the chart
+st.write("""
+This bar chart shows the number of vehicles by fuel type in the dataset.
+
+- **Gasoline Vehicles**: The majority, with 124,029 cars, dominate the dataset.
+- **Diesel**: There are 8,632 diesel cars, the second-largest category.
+- **Electric**: 5,023 electric vehicles reflect growing interest, though still smaller than gas and diesel.
+- **Hybrid and PHEV**: 4,442 hybrid and 2,979 plug-in hybrids indicate some demand for fuel-efficient options.
+- **CNG and Hydrogen**: These fuel types are rare, with only 6 CNG and 3 hydrogen vehicles.
+
+### Conclusion:
+Gasoline vehicles are the largest group, with other fuel types present in much smaller numbers, highlighting the continued dominance of traditional fuel in the market.
+""")
 
