@@ -8,7 +8,7 @@ st.markdown("""
     <style>
     .team-header {
         font-family: 'Arial', sans-serif;
-        color: #FFFFFF;
+        color: #333333;
         background-color: #4CAF50;
         padding: 20px;
         border-radius: 10px;
