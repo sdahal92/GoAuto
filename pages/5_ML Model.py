@@ -8,6 +8,26 @@ data = pd.read_csv("model_predictions_full.csv")  # Ensure the file is in the sa
 # Rename "listing_type" values for clarity
 data["listing_type"] = data["listing_type"].replace({"Active": "New", "Sold": "Used"})
 
+# Initialize session state keys
+if "listing_type" not in st.session_state:
+    st.session_state["listing_type"] = "New"
+if "car_make" not in st.session_state:
+    st.session_state["car_make"] = data["make"].unique()[0]
+if "car_model" not in st.session_state:
+    st.session_state["car_model"] = data[data["make"] == data["make"].unique()[0]]["model"].unique()[0]
+if "price_range" not in st.session_state:
+    st.session_state["price_range"] = (20000, 50000)
+if "mileage_range" not in st.session_state:
+    st.session_state["mileage_range"] = (10000, 50000)
+
+# Function to reset all inputs
+def clear_selection():
+    st.session_state["listing_type"] = "New"
+    st.session_state["car_make"] = data["make"].unique()[0]
+    st.session_state["car_model"] = data[data["make"] == data["make"].unique()[0]]["model"].unique()[0]
+    st.session_state["price_range"] = (20000, 50000)
+    st.session_state["mileage_range"] = (10000, 50000)
+
 # Custom CSS for larger fonts
 st.markdown(
     """
@@ -18,9 +38,6 @@ st.markdown(
         h1 {
             font-size: 36px;
             color: #5C4033;
-        }
-        h2, h3, h4 {
-            font-size: 28px;
         }
         label {
             font-size: 22px !important;
@@ -43,14 +60,6 @@ st.markdown("""
         🚗 Car Days-on-Market Predictor
     </h1>
 """, unsafe_allow_html=True)
-
-# Function to reset all inputs
-def clear_selection():
-    st.session_state["listing_type"] = "New"
-    st.session_state["car_make"] = data["make"].unique()[0]
-    st.session_state["car_model"] = data[data["make"] == data["make"].unique()[0]]["model"].unique()[0]
-    st.session_state["price_range"] = (20000, 50000)
-    st.session_state["mileage_range"] = (10000, 50000)
 
 # Add listing type selection at the top with session state
 listing_type = st.radio(
