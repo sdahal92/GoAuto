@@ -94,3 +94,63 @@ st.markdown("""
         <p>This data underscores the varying levels of demand for different car makes, with Toyota having the quickest turnover and Ram taking significantly longer.</p>
     </div>
 """, unsafe_allow_html=True)
+
+# Section 4: Average Days on Market by Audi Model
+st.markdown("""
+    <div style="
+        text-align: center; 
+        background-color: #FFDAB9; 
+        color: #5C4033; 
+        padding: 20px; 
+        border-radius: 15px; 
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 50px; 
+        margin-bottom: 30px;">
+        Average Days on Market by Audi Model
+    </div>
+""", unsafe_allow_html=True)
+
+st.image("images/Picture6.jpg", width=800)
+st.markdown("""
+    <div style="font-size: 24px; line-height: 1.8; color: #333;">
+        <p>The second chart breaks down the average days on market for different Audi models, showing significant variation in how long different models stay on the market.</p>
+        <ul>
+            <li><b>Audi SQ 8 e-tron</b> and <b>e-tron GT</b> have the longest average days on the market, indicating these models take the most time to sell.</li>
+            <li>Models like the <b>Audi S8</b> and <b>TT RS</b> have much shorter average days on market, suggesting quicker sales.</li>
+        </ul>
+        <h3 style="font-size: 24px; font-weight: bold; color: #5C4033;">Conclusion:</h3>
+        <p>The data highlights the differing demand levels for Audi models, with some high-performance or electric models taking longer to sell compared to others.</p>
+    </div>
+""", unsafe_allow_html=True)
+
+# Section 5: Correlation Heatmap
+st.markdown("""
+    <div style="
+        text-align: center; 
+        background-color: #FFDAB9; 
+        color: #5C4033; 
+        padding: 20px; 
+        border-radius: 15px; 
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 50px; 
+        margin-bottom: 30px;">
+        Correlation Heatmap
+    </div>
+""", unsafe_allow_html=True)
+
+st.image("images/Heatmap.jpg", width=800)
+st.markdown("""
+    <div style="font-size: 24px; line-height: 1.8; color: #333;">
+        <p>This heatmap represents the correlation between selected numerical features in the dataset.</p>
+        <p><b>Key Findings:</b></p>
+        <ul>
+            <li><b>Days on Market and Price (+0.10 correlation):</b> A weak positive correlation suggests higher-priced vehicles may stay on the market slightly longer.</li>
+            <li><b>Days on Market and Mileage (-0.10 correlation):</b> A weak negative correlation indicates vehicles with higher mileage might sell slightly quicker.</li>
+            <li><b>Days on Market and Model Year (+0.09 correlation):</b> A very weak positive correlation suggests newer vehicles tend to stay on the market slightly longer.</li>
+        </ul>
+    </div>
+""", unsafe_allow_html=True)
