@@ -25,4 +25,4 @@ st.markdown("""
 st.markdown("<h2 style='text-align: center;'>Meet Our Team</h2>", unsafe_allow_html=True)
 
 # Display the image
-st.image("images/Screenshot 2024-12-08 194954.png", caption="John Doe - Team Member", width=300)
+st.image("images/Screenshot 2024-12-08 194954.png", caption="John Doe - Team Member", width=900)
