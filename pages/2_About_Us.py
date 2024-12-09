@@ -10,10 +10,8 @@ st.markdown("""
         font-family: 'Arial', sans-serif;
         color: #4A4A4A; /* Dark gray text */
         text-align: center;
-        font-size: 64px; /* Extra large font size */
-        font-weight: bold; /* Bold text */
-        margin-bottom: 40px;
-        margin-top: 30px;
+        font-size: 28px;
+        margin-bottom: 20px;
     }
     .team-header {
         font-family: 'Arial', sans-serif;
@@ -31,7 +29,7 @@ st.markdown("""
     }
     </style>
     <div class="meet-team">
-        <p style="text-align: center; font-size: 50px; font-weight: bold;>Meet Our Team</p>
+        <p>Meet Our Team</p>
     </div>
     <div class="team-header">
         <h1>Team</h1>
