@@ -15,14 +15,29 @@ st.markdown("""
         text-align: center;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
     }
+    .team-member {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+    .team-member img {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .team-member h3 {
+        font-family: 'Arial', sans-serif';
+        color: #4A4A4A;
+        margin-top: 10px;
+    }
     </style>
     <div class="team-header">
         <h1>Team Regression Rebels</h1>
     </div>
+    <div class="team-member">
+        <img src="images/Screenshot 2024-12-08 194954.png" alt="Team Member">
+        <h3>John Doe</h3>
+    </div>
 """, unsafe_allow_html=True)
-
-# Add the team member's photo
-st.markdown("<h2 style='text-align: center;'>Meet Our Team</h2>", unsafe_allow_html=True)
-
-# Display the image
-st.image("images/Screenshot 2024-12-08 194954.png", caption="John Doe - Team Member", width=900)
