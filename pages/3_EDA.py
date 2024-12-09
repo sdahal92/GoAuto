@@ -145,12 +145,14 @@ st.markdown("""
 st.image("images/Heatmap.jpg", width=800)
 st.markdown("""
     <div style="font-size: 24px; line-height: 1.8; color: #333;">
-        <p>This heatmap represents the correlation between selected numerical features in the dataset.</p>
-        <p><b>Key Findings:</b></p>
+        <p>The heatmap illustrates the correlation between key numerical features in the dataset:</p>
         <ul>
-            <li><b>Days on Market and Price (+0.10 correlation):</b> A weak positive correlation suggests higher-priced vehicles may stay on the market slightly longer.</li>
-            <li><b>Days on Market and Mileage (-0.10 correlation):</b> A weak negative correlation indicates vehicles with higher mileage might sell slightly quicker.</li>
-            <li><b>Days on Market and Model Year (+0.09 correlation):</b> A very weak positive correlation suggests newer vehicles tend to stay on the market slightly longer.</li>
+            <li><b>Price and Mileage (-0.58):</b> Strong negative correlation indicates that vehicles with higher mileage tend to have lower prices.</li>
+            <li><b>Price and Days on Market (+0.10):</b> Weak positive correlation suggests higher-priced vehicles may stay on the market slightly longer.</li>
+            <li><b>Price and Model Year (+0.58):</b> Moderate positive correlation shows that newer vehicles (higher model year) tend to have higher prices.</li>
+            <li><b>Mileage and Model Year (-0.84):</b> Strong negative correlation indicates older vehicles (lower model year) tend to have higher mileage.</li>
+            <li><b>Days on Market and Mileage (-0.10):</b> Weak negative correlation suggests vehicles with higher mileage might sell slightly faster.</li>
+            <li><b>Days on Market and Model Year (+0.09):</b> Very weak positive correlation suggests newer vehicles might stay on the market slightly longer.</li>
         </ul>
     </div>
 """, unsafe_allow_html=True)
