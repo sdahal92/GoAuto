@@ -1,12 +1,17 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+from datetime import datetime
 
 # Load the dataset
 data = pd.read_csv("model_predictions_full.csv")  # Ensure the file is in the same directory
 
 # Rename "listing_type" values for clarity
 data["listing_type"] = data["listing_type"].replace({"Active": "New", "Sold": "Used"})
+
+# Calculate the vehicle year dynamically based on the current year
+current_year = datetime.now().year
+data["vehicle_year"] = current_year - data["vehicle_age"]
 
 # Custom CSS for larger fonts and styled title
 st.markdown(
@@ -77,12 +82,12 @@ price_range = st.slider(
     step=5000
 )
 
-# Select vehicle age range
-vehicle_age_range = st.slider(
-    "Select Vehicle Age Range (years)",
-    min_value=int(data["vehicle_age"].min()),
-    max_value=int(data["vehicle_age"].max()),
-    value=(int(data["vehicle_age"].min()), int(data["vehicle_age"].max())),  # Default full range
+# Select vehicle year range based on converted year
+vehicle_year_range = st.slider(
+    "Select Vehicle Year Range",
+    min_value=int(data["vehicle_year"].min()),
+    max_value=int(data["vehicle_year"].max()),
+    value=(int(data["vehicle_year"].min()), int(data["vehicle_year"].max())),  # Default full range
     step=1
 )
 
@@ -103,7 +108,7 @@ filtered_data = data[
     (data["make"] == car_make) &
     (data["model"] == car_model) &
     (data["price"] >= price_range[0]) & (data["price"] <= price_range[1]) &
-    (data["vehicle_age"] >= vehicle_age_range[0]) & (data["vehicle_age"] <= vehicle_age_range[1]) &
+    (data["vehicle_year"] >= vehicle_year_range[0]) & (data["vehicle_year"] <= vehicle_year_range[1]) &
     (data["mileage"] >= mileage_range[0]) & (data["mileage"] <= mileage_range[1]) &
     (data["listing_type"] == listing_type)
 ]
