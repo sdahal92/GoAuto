@@ -7,7 +7,7 @@ st.title("Exploratory Data Analysis (EDA)")
 st.subheader("Distribution of Cars by Fuel Type")
 
 # Display the image with adjusted width
-st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", width=700)
+st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", width=800)
 
 # Description for the chart
 st.write("""
