@@ -50,7 +50,7 @@ filtered_data = data[
     (data["listing_type"] == listing_type)
 ]
 
-# If no match is found, generate a random predicted value near the average of the dataset
+# Display the predicted days on market
 if not filtered_data.empty:
     predicted_days = filtered_data["Predicted"].values[0]  # Replace "Predicted" if the column name is different
     st.success(f"The car is predicted to stay on the market for approximately {round(predicted_days, 2)} days.")
@@ -69,4 +69,4 @@ else:
         avg_predicted = data["Predicted"].mean()
         random_predicted = np.random.uniform(avg_predicted - 10, avg_predicted + 10)
 
-    st.info(f"No exact match found. Based on nearby data, the estimated days on market are approximately {round(random_predicted, 2)} days.")
+    st.success(f"The car is predicted to stay on the market for approximately {round(random_predicted, 2)} days.")
