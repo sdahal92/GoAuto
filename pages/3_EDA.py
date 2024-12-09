@@ -17,10 +17,10 @@ st.markdown("""
     <br><br>
 """, unsafe_allow_html=True)
 
-# Center-align the image and add caption
+# Display the image and align it to the center
 st.markdown("""
     <div style="text-align: center;">
-        <img src="images/Picture5.jpg" alt="Distribution of Cars by Fuel Type" style="width: 800px;">
+        <img src="images/Picture5.jpg" style="max-width: 800px; width: 100%;" alt="Distribution of Cars by Fuel Type">
         <p style="font-size: 1.1rem; font-weight: bold; color: #333;">Distribution of Cars by Fuel Type</p>
     </div>
 """, unsafe_allow_html=True)
