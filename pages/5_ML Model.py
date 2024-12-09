@@ -16,16 +16,33 @@ st.markdown("### Enter Car Details")
 # Collect user inputs
 car_make = st.selectbox("Car Make", options=data["make"].unique())
 car_model = st.selectbox("Car Model", options=data[data["make"] == car_make]["model"].unique())
-price = st.slider("Car Price ($)", min_value=int(data["price"].min()), max_value=int(data["price"].max()), step=5000, value=30000)
-mileage = st.slider("Car Mileage (miles)", min_value=int(data["mileage"].min()), max_value=int(data["mileage"].max()), step=5000, value=50000)
+
+# Select price range
+price_range = st.slider(
+    "Select Price Range ($)",
+    min_value=int(data["price"].min()),
+    max_value=int(data["price"].max()),
+    value=(20000, 50000),  # Default range
+    step=5000
+)
+
+# Select mileage range
+mileage_range = st.slider(
+    "Select Mileage Range (miles)",
+    min_value=int(data["mileage"].min()),
+    max_value=int(data["mileage"].max()),
+    value=(10000, 50000),  # Default range
+    step=5000
+)
+
 listing_type = st.radio("Listing Type", options=["Active", "Sold"])
 
-# Filter the dataset based on user inputs
+# Filter the dataset based on inputs
 filtered_data = data[
     (data["make"] == car_make) &
     (data["model"] == car_model) &
-    (data["price"] >= price - 5000) & (data["price"] <= price + 5000) &
-    (data["mileage"] >= mileage - 5000) & (data["mileage"] <= mileage + 5000) &
+    (data["price"] >= price_range[0]) & (data["price"] <= price_range[1]) &  # Match price range
+    (data["mileage"] >= mileage_range[0]) & (data["mileage"] <= mileage_range[1]) &  # Match mileage range
     (data["listing_type"].str.lower() == listing_type.lower())  # Match listing type
 ]
 
