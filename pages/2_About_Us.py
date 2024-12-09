@@ -22,4 +22,4 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Add the photo
-st.image("images/Go_Auto.jpg", width=200)
+st.image("images/Screenshot 2024-12-08 194954.png", width=900)
