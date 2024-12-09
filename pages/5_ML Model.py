@@ -8,27 +8,7 @@ data = pd.read_csv("model_predictions_full.csv")  # Ensure the file is in the sa
 # Rename "listing_type" values for clarity
 data["listing_type"] = data["listing_type"].replace({"Active": "New", "Sold": "Used"})
 
-# Initialize session state keys
-if "listing_type" not in st.session_state:
-    st.session_state["listing_type"] = "New"
-if "car_make" not in st.session_state:
-    st.session_state["car_make"] = data["make"].unique()[0]
-if "car_model" not in st.session_state:
-    st.session_state["car_model"] = data[data["make"] == data["make"].unique()[0]]["model"].unique()[0]
-if "price_range" not in st.session_state:
-    st.session_state["price_range"] = (20000, 50000)
-if "mileage_range" not in st.session_state:
-    st.session_state["mileage_range"] = (10000, 50000)
-
-# Function to reset all inputs
-def clear_selection():
-    st.session_state["listing_type"] = "New"
-    st.session_state["car_make"] = data["make"].unique()[0]
-    st.session_state["car_model"] = data[data["make"] == data["make"].unique()[0]]["model"].unique()[0]
-    st.session_state["price_range"] = (20000, 50000)
-    st.session_state["mileage_range"] = (10000, 50000)
-
-# Custom CSS for larger fonts
+# Custom CSS for larger fonts and styled title
 st.markdown(
     """
     <style>
@@ -49,45 +29,52 @@ st.markdown(
         .stSuccess {
             font-size: 24px !important;
         }
+        .title-box {
+            padding: 20px;
+            text-align: center;
+            background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient colors */
+            color: white;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
     </style>
     """,
     unsafe_allow_html=True
 )
 
-# Title for the page
+# Title for the page inside a styled box
 st.markdown("""
-    <h1 style="text-align: center;">
-        🚗 Car Days-on-Market Predictor
-    </h1>
+    <div class="title-box">
+        Days-on-Market Predictor
+    </div>
 """, unsafe_allow_html=True)
 
-# Add listing type selection at the top with session state
+# Add listing type selection at the top
 listing_type = st.radio(
     "What type of car are you considering?",
-    options=["New", "Used"],
-    key="listing_type"
+    options=["New", "Used"]
 )
 
-# Collect user inputs with session state
+# Collect user inputs
 car_make = st.selectbox(
     "Car Make",
-    options=data["make"].unique(),
-    key="car_make"
+    options=data["make"].unique()
 )
 car_model = st.selectbox(
     "Car Model",
-    options=data[data["make"] == car_make]["model"].unique(),
-    key="car_model"
+    options=data[data["make"] == car_make]["model"].unique()
 )
 
-# Select price range starting from $0 with session state
+# Select price range starting from $0
 price_range = st.slider(
     "Select Price Range ($)",
     min_value=0,
     max_value=int(data["price"].max()),
     value=(20000, 50000),  # Default range
-    step=5000,
-    key="price_range"
+    step=5000
 )
 
 # Disable mileage slider dynamically based on "New" or "Used" selection
@@ -97,15 +84,10 @@ if listing_type == "Used":
         min_value=int(data["mileage"].min()),
         max_value=int(data["mileage"].max()),
         value=(10000, 50000),  # Default range
-        step=5000,
-        key="mileage_range"
+        step=5000
     )
 else:
     mileage_range = (0, 0)  # For new cars, mileage is effectively ignored
-
-# Add a "Clear Selection" button
-if st.button("Clear Selection"):
-    clear_selection()
 
 # Filter the dataset based on inputs
 filtered_data = data[
@@ -119,7 +101,7 @@ filtered_data = data[
 # Display the predicted days on market
 if not filtered_data.empty:
     predicted_days = int(filtered_data["Predicted"].values[0])  # Convert to integer
-    st.success(f"The car is predicted to stay on the market for approximately {predicted_days} days.")
+    st.success(f"The vehicle is predicted to stay on the market for approximately {predicted_days} days.")
 else:
     # Generate a random predicted value near the average of the dataset
     nearby_data = data[
@@ -135,4 +117,4 @@ else:
         avg_predicted = data["Predicted"].mean()
         random_predicted = int(np.random.uniform(avg_predicted - 10, avg_predicted + 10))  # Convert to integer
 
-    st.success(f"The car is predicted to stay on the market for approximately {random_predicted} days.")
+    st.success(f"The vehicle is predicted to stay on the market for approximately {random_predicted} days.")
