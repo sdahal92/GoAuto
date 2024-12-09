@@ -1,4 +1,5 @@
 import streamlit as st
+streamlit run team_page.py
 
 # Set page configuration
 st.set_page_config(page_title="Team Regression Rebels", layout="centered")
