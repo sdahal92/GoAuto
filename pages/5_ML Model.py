@@ -12,7 +12,6 @@ data["listing_type"] = data["listing_type"].replace({"Active": "New", "Sold": "U
 st.markdown(
     """
     <style>
-        /* General page style */
         body {
             font-size: 18px;
         }
@@ -43,6 +42,9 @@ st.markdown("""
 
 st.markdown("### Enter Car Details")
 
+# Add listing type selection at the top
+listing_type = st.radio("What type of car are you considering?", options=["New", "Used"])
+
 # Collect user inputs
 car_make = st.selectbox("Car Make", options=data["make"].unique())
 car_model = st.selectbox("Car Model", options=data[data["make"] == car_make]["model"].unique())
@@ -56,16 +58,17 @@ price_range = st.slider(
     step=5000
 )
 
-# Select mileage range
-mileage_range = st.slider(
-    "Select Mileage Range (miles)",
-    min_value=int(data["mileage"].min()),
-    max_value=int(data["mileage"].max()),
-    value=(10000, 50000),  # Default range
-    step=5000
-)
-
-listing_type = st.radio("What type of car are you considering?", options=["New", "Used"])
+# Disable mileage slider dynamically based on "New" or "Used" selection
+if listing_type == "Used":
+    mileage_range = st.slider(
+        "Select Mileage Range (miles)",
+        min_value=int(data["mileage"].min()),
+        max_value=int(data["mileage"].max()),
+        value=(10000, 50000),  # Default range
+        step=5000
+    )
+else:
+    mileage_range = (0, 0)  # For new cars, mileage is effectively ignored
 
 # Filter the dataset based on inputs
 filtered_data = data[
