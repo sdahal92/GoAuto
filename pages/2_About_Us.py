@@ -19,8 +19,8 @@ st.markdown("""
         line-height: 1.2;
         margin-top: 30px;
     }
-    .roles-container {
-        margin-left: -10px; /* Move 1 cm to the left (approx. 10px) */
+    .spacer {
+        margin-top: 40px; /* Adds vertical space between header and photo */
     }
     .roles {
         font-family: 'Arial', sans-serif;
@@ -35,45 +35,43 @@ st.markdown("""
         <h1>Team</h1>
         <h1>Regression Rebels</h1>
     </div>
+    <div class="spacer"></div> <!-- Spacer for gap -->
 """, unsafe_allow_html=True)
 
 # Add the team photo
 st.image("images/Screenshot 2024-12-08 194954.png", width=900)
 
-# Display roles in columns with left alignment adjustment
-with st.container():
-    st.markdown('<div class="roles-container">', unsafe_allow_html=True)
-    col1, col2, col3, col4 = st.columns(4)
+# Display roles in columns
+col1, col2, col3, col4 = st.columns(4)
 
-    with col1:
-        st.markdown("""
-        <div class="roles">
-            <p><strong>Rohit</strong></p>
-            <p>Data Preprocessing Lead</p>
-        </div>
-        """, unsafe_allow_html=True)
+with col1:
+    st.markdown("""
+    <div class="roles">
+        <p><strong>Rohit</strong></p>
+        <p>Data Preprocessing Lead</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    with col2:
-        st.markdown("""
-        <div class="roles">
-            <p><strong>Abhinav Datt</strong></p>
-            <p>Visualization Expert</p>
-        </div>
-        """, unsafe_allow_html=True)
+with col2:
+    st.markdown("""
+    <div class="roles">
+        <p><strong>Abhinav Datt</strong></p>
+        <p>Visualization Expert</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    with col3:
-        st.markdown("""
-        <div class="roles">
-            <p><strong>Spandan Dahal</strong></p>
-            <p>Model Developer</p>
-        </div>
-        """, unsafe_allow_html=True)
+with col3:
+    st.markdown("""
+    <div class="roles">
+        <p><strong>Spandan Dahal</strong></p>
+        <p>Model Developer</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-    with col4:
-        st.markdown("""
-        <div class="roles">
-            <p><strong>Jatin Dadhyan</strong></p>
-            <p>Project Coordinator</p>
-        </div>
-        """, unsafe_allow_html=True)
-    st.markdown('</div>', unsafe_allow_html=True)
+with col4:
+    st.markdown("""
+    <div class="roles">
+        <p><strong>Jatin Dadhyan</strong></p>
+        <p>Project Coordinator</p>
+    </div>
+    """, unsafe_allow_html=True)
