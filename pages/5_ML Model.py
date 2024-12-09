@@ -23,10 +23,14 @@ st.markdown(
             font-size: 28px;
         }
         label {
-            font-size: 20px !important;
+            font-size: 22px !important;
+            font-weight: bold;
         }
         .stButton button {
             font-size: 18px !important;
+        }
+        .stSuccess {
+            font-size: 24px !important;
         }
     </style>
     """,
@@ -40,22 +44,41 @@ st.markdown("""
     </h1>
 """, unsafe_allow_html=True)
 
-st.markdown("### Enter Car Details")
+# Function to reset all inputs
+def clear_selection():
+    st.session_state["listing_type"] = "New"
+    st.session_state["car_make"] = data["make"].unique()[0]
+    st.session_state["car_model"] = data[data["make"] == data["make"].unique()[0]]["model"].unique()[0]
+    st.session_state["price_range"] = (20000, 50000)
+    st.session_state["mileage_range"] = (10000, 50000)
 
-# Add listing type selection at the top
-listing_type = st.radio("What type of car are you considering?", options=["New", "Used"])
+# Add listing type selection at the top with session state
+listing_type = st.radio(
+    "What type of car are you considering?",
+    options=["New", "Used"],
+    key="listing_type"
+)
 
-# Collect user inputs
-car_make = st.selectbox("Car Make", options=data["make"].unique())
-car_model = st.selectbox("Car Model", options=data[data["make"] == car_make]["model"].unique())
+# Collect user inputs with session state
+car_make = st.selectbox(
+    "Car Make",
+    options=data["make"].unique(),
+    key="car_make"
+)
+car_model = st.selectbox(
+    "Car Model",
+    options=data[data["make"] == car_make]["model"].unique(),
+    key="car_model"
+)
 
-# Select price range starting from $0
+# Select price range starting from $0 with session state
 price_range = st.slider(
     "Select Price Range ($)",
-    min_value=0,  # Start from $0
+    min_value=0,
     max_value=int(data["price"].max()),
     value=(20000, 50000),  # Default range
-    step=5000
+    step=5000,
+    key="price_range"
 )
 
 # Disable mileage slider dynamically based on "New" or "Used" selection
@@ -65,10 +88,15 @@ if listing_type == "Used":
         min_value=int(data["mileage"].min()),
         max_value=int(data["mileage"].max()),
         value=(10000, 50000),  # Default range
-        step=5000
+        step=5000,
+        key="mileage_range"
     )
 else:
     mileage_range = (0, 0)  # For new cars, mileage is effectively ignored
+
+# Add a "Clear Selection" button
+if st.button("Clear Selection"):
+    clear_selection()
 
 # Filter the dataset based on inputs
 filtered_data = data[
