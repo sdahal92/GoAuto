@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import daytime as daytime
+from datetime import datetime
 
 # Load the dataset
 data = pd.read_csv("model_predictions_full.csv")  # Ensure the file is in the same directory
