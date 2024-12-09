@@ -15,6 +15,8 @@ st.markdown("""
         Exploratory Data Analysis (EDA)
     </div>
     <br><br>
+    <br><br>
+
 
 """, unsafe_allow_html=True)
 
