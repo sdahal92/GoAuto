@@ -1,5 +1,5 @@
 import streamlit as st
-<h1>Meet out ream<h1>
+
 # Set page configuration
 st.set_page_config(page_title="Team Regression Rebels", layout="centered")
 
