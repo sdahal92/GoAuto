@@ -21,8 +21,7 @@ st.markdown("""
     }
     </style>
     <div class="team-header">
-        <h1>Team</h1>
-        <h1>Regression Rebels</h1>
+        <h1> Team Regression Rebels</h1>
     </div>
     <div class="spacer"></div> <!-- Gap between title and photo -->
 """, unsafe_allow_html=True)
