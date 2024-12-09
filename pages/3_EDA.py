@@ -6,8 +6,8 @@ st.title("Exploratory Data Analysis (EDA)")
 # Subtitle for the section
 st.subheader("Distribution of Cars by Fuel Type")
 
-# Display the image
-st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", use_column_width=True)
+# Display the image with adjusted width
+st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", width=700)
 
 # Description for the chart
 st.write("""
@@ -22,4 +22,3 @@ This bar chart shows the number of vehicles by fuel type in the dataset.
 ### Conclusion:
 Gasoline vehicles are the largest group, with other fuel types present in much smaller numbers, highlighting the continued dominance of traditional fuel in the market.
 """)
-
