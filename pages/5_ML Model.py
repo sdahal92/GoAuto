@@ -18,21 +18,28 @@ st.markdown(
     """
     <style>
         body {
-            font-size: 18px;
+            font-size: 20px; /* Increase overall font size */
         }
         h1 {
-            font-size: 36px;
+            font-size: 40px; /* Increase title font size */
             color: #5C4033;
         }
         label {
-            font-size: 22px !important;
+            font-size: 24px !important; /* Increase label font size */
             font-weight: bold;
         }
         .stButton button {
-            font-size: 18px !important;
+            font-size: 20px !important; /* Increase button font size */
+            padding: 10px 20px; /* Adjust button size */
+        }
+        .stRadio label {
+            font-size: 20px !important; /* Increase font size for radio options */
+        }
+        .stSlider .stSliderLabel {
+            font-size: 20px !important; /* Increase font size for slider labels */
         }
         .stSuccess {
-            font-size: 24px !important;
+            font-size: 24px !important; /* Increase success message font size */
         }
         .title-box {
             padding: 20px;
@@ -41,7 +48,7 @@ st.markdown(
             color: white;
             border-radius: 10px;
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-            font-size: 36px;
+            font-size: 40px; /* Larger font for title */
             font-weight: bold;
             margin-bottom: 30px;
         }
