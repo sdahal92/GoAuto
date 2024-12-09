@@ -4,7 +4,7 @@ import streamlit as st
 st.set_page_config(page_title="EDA - Power BI Dashboard", layout="wide")
 
 # Title for the EDA page
-st.title("Exploratory Data Analysis (EDA)")
+st.title("Power BI dashboard")
 
 # Embed the Power BI dashboard
 st.markdown("""
