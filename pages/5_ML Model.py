@@ -52,8 +52,8 @@ filtered_data = data[
 
 # Display the predicted days on market
 if not filtered_data.empty:
-    predicted_days = filtered_data["Predicted"].values[0]  # Replace "Predicted" if the column name is different
-    st.success(f"The car is predicted to stay on the market for approximately {round(predicted_days, 2)} days.")
+    predicted_days = int(filtered_data["Predicted"].values[0])  # Convert to integer
+    st.success(f"The car is predicted to stay on the market for approximately {predicted_days} days.")
 else:
     # Generate a random predicted value near the average of the dataset
     nearby_data = data[
@@ -64,9 +64,9 @@ else:
     
     if not nearby_data.empty:
         avg_predicted = nearby_data["Predicted"].mean()
-        random_predicted = np.random.uniform(avg_predicted - 5, avg_predicted + 5)
+        random_predicted = int(np.random.uniform(avg_predicted - 5, avg_predicted + 5))  # Convert to integer
     else:
         avg_predicted = data["Predicted"].mean()
-        random_predicted = np.random.uniform(avg_predicted - 10, avg_predicted + 10)
+        random_predicted = int(np.random.uniform(avg_predicted - 10, avg_predicted + 10))  # Convert to integer
 
-    st.success(f"The car is predicted to stay on the market for approximately {round(random_predicted, 2)} days.")
+    st.success(f"The car is predicted to stay on the market for approximately {random_predicted} days.")
