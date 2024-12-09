@@ -3,7 +3,7 @@ import streamlit as st
 # Title for the EDA page
 st.title("Exploratory Data Analysis (EDA)")
 
-
+st.markdown("<br>", unsafe_allow_html=True)
 
 # Display the image with adjusted width
 st.image("images/Picture5.jpg", caption="Distribution of Cars by Fuel Type", width=800)
